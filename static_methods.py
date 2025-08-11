@@ -9,8 +9,6 @@ class math:
     def add(a, b):
         return a + b
     
-# result = math.add(1 ,2)
-# peint(result)  # output: 3
 a = math(5)
 print(a.num)  
 a.addtonum(6)
