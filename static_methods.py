@@ -8,7 +8,7 @@ class math:
     @staticmethod
     def add(a, b):
         return a + b
-    
+     
 a = math(5)
 print(a.num)  
 a.addtonum(6)
