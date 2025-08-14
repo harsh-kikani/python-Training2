@@ -1,4 +1,4 @@
-import threading
+'''import threading
 import time
 from concurrent.futures import ThreadPoolExecutor 
 
@@ -10,9 +10,9 @@ def func(seconds):
 def main():
     time1 = time.perf_counter()
     # normal code
-    '''func(4)
+   ''' '''func(4)
     func(2)
-    func(1)'''
+    func(1)''''''
 
 
     # same code using threads
@@ -41,4 +41,32 @@ def poolingDemo():
         future3 = executor.submit(func, 4)
         print(future3.result()) 
         
-poolingDemo()
+poolingDemo()'''
+
+
+import threading
+import time
+
+def print_numbers():
+    for i in range(5):
+        print(f"Number: {i}")
+        time.sleep(1)
+
+def print_letters():
+    for letter in 'ABCDE':
+        print(f"Letter: {letter}")
+        time.sleep(1)
+
+# Create threads
+t1 = threading.Thread(target=print_numbers)
+t2 = threading.Thread(target=print_letters)
+
+# Start threads
+t1.start()
+t2.start()
+
+# Wait for both threads to finish
+t1.join()
+t2.join()
+
+print("Done!")
