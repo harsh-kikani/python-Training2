@@ -2,11 +2,13 @@ menu = {
     'pizza':100,
     'pasta':70,
     'burger':60,
+    'frenkie':80,
     'salad':40,
     'coffee':50,
+    
 }
 print("Welcome to Restaurant")
-print("Pizza: Rs100\nPasta: Rs70\nBurger: Rs60\nSalad: Rs40\nCoffee: Rs50")
+print("Pizza: Rs100\nPasta: Rs70\nBurger: Rs60\nfrenkie: Rs80\nSalad: Rs40\nCoffee: Rs50")
 
 order_total = 0
 
