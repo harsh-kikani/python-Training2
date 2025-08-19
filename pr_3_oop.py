@@ -26,7 +26,7 @@ print(acc1.reset_pass())'''
 
 #------ Private attributes & methods-------
 
-class Person:
+'''class Person:
     __name = "anonymous"
     
     def __hello(self):
@@ -37,6 +37,59 @@ class Person:
         
 p1 = Person() 
 
-print(p1.welcome())
+print(p1.welcome())'''
+
+
+#----Inherits-------
+
+'''class Car:
+    @staticmethod
+    def start():
+        print("car started..")
+        
+    @staticmethod
+    def stop():
+        print("car stopped.")
+        
+class ToyotaCar(Car):
+    def __init__(self, brand):
+        self.name = brand
+        
+class Fortuner(ToyotaCar):
+    def __init__(self, type):
+        self.type = type
+        
+car1 = Fortuner("diesel")
+car1.start()'''
+        
+        
+#-----super() method---------
+
+
+class Car:
+    def __init__(self, type):
+        self.type = type
+
+    @staticmethod
+    def start():
+        print("car started..")
+
+    @staticmethod
+    def stop():
+        print("car stopped.")
+
+class ToyotaCar(Car):
+    def __init__(self, name, type):
+        super().__init__(type)
+        self.name = name
+        super().start()
+
+car1 = ToyotaCar("prius", "electric")
+print(car1.name)   
+print(car1.type)   
+
+        
+
+
 
         
