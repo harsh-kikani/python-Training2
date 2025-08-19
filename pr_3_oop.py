@@ -24,4 +24,19 @@ print(acc1.acc_no)
 print(acc1.reset_pass())'''
 
 
+#------ Private attributes & methods-------
+
+class Person:
+    __name = "anonymous"
+    
+    def __hello(self):
+        print("hello person!")
+        
+    def welcome(self):
+        self.__hello()
+        
+p1 = Person() 
+
+print(p1.welcome())
+
         
