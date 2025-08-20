@@ -9,8 +9,7 @@ class Employee:
         print("role = ", self.role)
         print("department=",self.dept)
         print("salary=",self.salary)
-        
-
+    
 name = input("Enter employee name :")
 role = input("Enter employee role :")
 dept = input("Enter employee dept :") 
