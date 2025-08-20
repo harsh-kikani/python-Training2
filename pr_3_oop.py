@@ -125,9 +125,9 @@ print(stu1.percentage)
 stu1.phy = 88
 print(stu1.percentage)'''
 
-
+#---------------------------------------
         
-class Complex:
+'''class Complex:
     def __init__(self, real, img):
         self.real = real
         self.img = img
@@ -152,10 +152,23 @@ num2 = Complex(4, 6)
 num1.showNumber()
 
 num3 = num1 - num2
-num3.showNumber()
+num3.showNumber()'''
     
     
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
         
+    def area(self):
+        return (22/7) * self.radius **2
+    
+    def perimeter(self):
+        return 2 * (22/7) * self.radius
+
+c1 = Circle(21)
+print(c1.area())
+print(c1.perimeter())
+ 
 
 
         
