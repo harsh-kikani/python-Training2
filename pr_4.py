@@ -39,5 +39,32 @@ courses = []
 enrollments = []
 DATA_FILE = "school_management.json"
 
+
+#---------------File Operations------------------
 def save_data():   
+    data = {
+        "students": [vars(s) for s in students],
+        "teachers": [vars(t) for t in teachers],
+        "courses": [vars(c) for c in courses],
+        "enrollments": [vars(e) for e in enrollments], 
+    }
+    with open("school_management.json", "w") as f:
+        json.dump(data, f ,indent=4)
+    print("Data save successfully.")
+    
+def load_data():
+    try:
+        with open("school_management.json", "r") as f:
+            data = json.load(f)
+            students.extend(students(**s) for s in data["students"])
+            teachers.extend(teachers(**t) for t in data["teachers"])
+            courses.extend(courses(**c) for c in data["courses"])
+            enrollments.extend(enrollments(**e) for e in data["enrollments"])
+            print("Data loaded successfully.")
+    except FileNotFoundError:
+        print("No data file found.")
+        
+        
+
+    
     
