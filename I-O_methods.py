@@ -45,18 +45,22 @@ with open("myfile.txt", "w") as f:
     f.write("using python.\nI like programming in python")'''
     
     
+#--------read()----replace()---------    
 
 '''with open("myfile2.txt", "r") as f:
     data = f.read()
-    
+
+
 new_data = data.replace("python","Django")
 print(new_data)
 
 with open("myfile.txt", "w") as f:
     f.write(new_data)'''
+
     
-    
-def check_for_word():
+#------------find()----------------
+
+'''def check_for_word():
     word = "nolearning"
     with open("myfile.txt", "r") as f:
         data = f.read()
@@ -65,4 +69,31 @@ def check_for_word():
         else:
             print("not found")
             
-check_for_word()
+check_for_word()'''
+
+
+#-----------readline()-----------------
+
+def check_for_word():
+    word = "nolearning"
+    with open("myfile.txt", "r") as f:
+        data = f.read()
+        if(word in data):
+            print("found")
+        else:
+            print("not found")
+
+def check_for_line():
+    word = "learning"
+    data = True
+    line_no = 1
+    with open("myfile.txt", "r") as f:
+        while data:
+            data = f.readline()
+            if(word in data):
+                print(line_no)
+                return
+            line_no += 1
+        
+    return -1
+print(check_for_line())  
