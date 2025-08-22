@@ -1,1 +1,4 @@
-hello,how are you!hello word!hey i am inside with
+Hii everyone
+We are learning File I/O
+using Django.
+I like programming in Django

@@ -1,20 +1,54 @@
-'''f = open('myfile.txt', 'r')
-i = 0
-while True:
-    i = i + 1
-    line = f.readline()
-    if not line:
-        break
-    m1 = line.split(",")[0]
-    m2 = line.split(",")[1]
-    m3 = line.split(",")[2]
-    print(f"marks of student {i} in Maths is: {m1}")
-    print(f"marks of student {i} in english is: {m2}")
-    print(f"marks of student {i} in SST is: {m3}")
-    
-print(line)'''
+'''f = open("myfile.txt","r")
+data = f.read()
+print(data)
+print(type(data))
+f.close()'''
 
-f = open('myfile2.txt', 'w')
-lines = ['line 1\n', 'line 2\n', 'line 3\n']
-f.writelines(lines)
-f.close() 
+
+'''f = open("myfile.txt", "r")
+data = f.read()
+print(data)
+
+l1 = f.readline()
+print = (l1)
+
+l2 = f.readline()
+print = (l2)
+
+f.close()'''
+
+
+
+'''f = open("myfile.txt", "a")
+
+f.write("then i will remove django")
+
+f.write("\nafter the nodejs ")
+
+f.close()
+'''
+ 
+'''with open("myfile.txt", "r") as f:
+    data = f.read()
+    print(data)
+    
+with open("myfile.txt", "w") as f:
+    f.write("new data")'''
+    
+ 
+#import os
+#os.remove("myfile2.txt")
+
+
+'''with open("myfile2.txt", "w") as f:
+    f.write("Hii everyone\nWe are learning File I/O\n")
+    f.write("using python.\nI like programming in python")'''
+    
+with open("myfile2.txt", "r") as f:
+    data = f.read()
+    
+new_data = data.replace("python","Django")
+print(new_data)
+
+with open("myfile.txt", "w") as f:
+    f.write(new_data)
