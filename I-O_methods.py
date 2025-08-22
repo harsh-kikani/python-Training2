@@ -54,3 +54,15 @@ print(new_data)
 
 with open("myfile.txt", "w") as f:
     f.write(new_data)'''
+    
+    
+def check_for_word():
+    word = "nolearning"
+    with open("myfile.txt", "r") as f:
+        data = f.read()
+        if(data.find(word) != -1):
+            print("found")
+        else:
+            print("not found")
+            
+check_for_word()
