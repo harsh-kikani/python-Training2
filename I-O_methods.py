@@ -74,7 +74,7 @@ check_for_word()'''
 
 #-----------readline()-----------------
 
-def check_for_word():
+'''def check_for_word():
     word = "nolearning"
     with open("myfile.txt", "r") as f:
         data = f.read()
@@ -96,4 +96,16 @@ def check_for_line():
             line_no += 1
         
     return -1
-print(check_for_line())  
+print(check_for_line())  '''
+
+
+count = 0
+with open("myfile3.txt", "r") as f:
+    data = f.read()
+    
+    nums = data.split(",")
+    for val in nums:
+        if(int(val) % 2 == 0):
+            count += 1
+
+print(count)
