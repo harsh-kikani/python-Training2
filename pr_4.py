@@ -39,4 +39,5 @@ courses = []
 enrollments = []
 DATA_FILE = "school_management.json"
 
-def save_data():
+def save_data():   
+    

@@ -36,6 +36,19 @@ with open("myfile.txt", "w") as f:
     f.write("new data")'''
     
  
-import os
+#import os
+#os.remove("myfile2.txt")
 
-os.remove("myfile2.txt")
+
+'''with open("myfile2.txt", "w") as f:
+    f.write("Hii everyone\nWe are learning File I/O\n")
+    f.write("using python.\nI like programming in python")'''
+    
+with open("myfile2.txt", "r") as f:
+    data = f.read()
+    
+new_data = data.replace("python","Django")
+print(new_data)
+
+with open("myfile.txt", "w") as f:
+    f.write(new_data)
