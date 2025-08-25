@@ -1,4 +1,4 @@
-class Account:
+'''class Account:
     def __init__(self, bal, acc):
         self.balance = bal
         self.account_no = acc
@@ -20,4 +20,14 @@ acc1 = Account(10000, 12345)
 acc1.debit(1000)
 acc1.credit(500)
 acc1.credit(40000)
-acc1.debit(10000)       
+acc1.debit(10000)'''
+
+def cal_fact(n):
+    fact = 1
+    for i in range(1, n+1):
+        fact *= i
+    print("Factorial is:", fact)
+
+n = int(input("Enter a number: ")) 
+cal_fact(n)
+    
