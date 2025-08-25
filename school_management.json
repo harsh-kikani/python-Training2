@@ -1,0 +1,31 @@
+{
+    "students": [
+        {
+            "person_id": "01",
+            "name": "rahul",
+            "age": 12,
+            "grade": "A"
+        }
+    ],
+    "teachers": [
+        {
+            "person_id": "1",
+            "name": "ravina",
+            "age": 21,
+            "subject": "english"
+        }
+    ],
+    "courses": [
+        {
+            "course_id": "001",
+            "title": "maths",
+            "teacher_id": "1"
+        }
+    ],
+    "enrollments": [
+        {
+            "student_id": "01",
+            "course_id": "001"
+        }
+    ]
+}
